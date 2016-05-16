@@ -17,7 +17,7 @@
     "npm": "~2.5"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "koa": "^1.1.2",
