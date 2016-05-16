@@ -54,6 +54,8 @@ function* getWeather(next) {
 
   let msg = data.name+", "+data.sys.country+ ". Wather: "+data.weather[0].main;
   console.log(msg);
-  this.body = msg;
+  this.body = {
+    msg; msg
+  };
   yield next;
 }
