@@ -52,7 +52,15 @@ function* getWeather(next) {
   }
   console.log(data);
 
-  let msg = data.name+", "+data.sys.country+ ". Wather: "+data.weather[0].main;
+  let city = data.name;
+  let country = data.sys.country;
+  let weather = data.weather[0].main;
+  let description = data.weather[0].description;
+  let temp = data.main.temp;
+  let c = Math.ceil(temp-273.15);
+  let f = Math.ceil((9/5)*c +32);
+
+  let msg = city+", "+country+ ". Wather: "+weather+" - "+description+". Temp: "+c+ "°C/"+f+"°F";
   console.log(msg);
   this.body = {
     msg: msg
